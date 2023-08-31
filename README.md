@@ -70,7 +70,7 @@ Clone this repository to your desired folder:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Author1**
+👤 **Kimita Wanjohi**
 
 - GitHub: [@kimitawanjohi](https://github.com/kimitawanjohi)
 - Twitter: [@myro_dev](https://twitter.com/myro_dev)
