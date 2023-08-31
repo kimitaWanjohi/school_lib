@@ -12,6 +12,6 @@ class Student < Person
   end
 
   def add_classroom(classroom)
-  classroom.student.push(self) unless classroom.student.include?(self)
-end
+    classroom.student.push(self) unless classroom.student.include?(self)
+  end
 end
