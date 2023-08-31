@@ -76,7 +76,15 @@ Clone this repository to your desired folder:
 - Twitter: [@myro_dev](https://twitter.com/myro_dev)
 - LinkedIn: [kimitawanjohi](https://linkedin.com/in/kimitawanjohi)
 
-<!-- TODO ADD OTHER CONTRIBUTERS -->
+<!-- TODO ADD OTHER CONTRIBUTORS -->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🔭 Future Features <a name="future-features"></a>
+
+> Describe 1 - 3 features you will add to the project.
+
+- [ ] **[ Add an User Interface ]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -98,12 +106,17 @@ If you like this project please give it a ⭐️!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+> Give credit to everyone who inspired your codebase.
+
+I would like to thank Microverse.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
