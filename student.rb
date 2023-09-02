@@ -1,18 +1,20 @@
 require './person'
+require './classroom'
 
-# This class is responsible for storing information about a student
 class Student < Person
-  def initialize(classroom, age, name: 'unknown', parent_permission: true)
-    super(age, name: name, parent_permission: parent_permission)
+  attr_reader :classroom
+
+  def initialize(age, name, parent_permission, classroom)
+    super(age, name, parent_permission: parent_permission)
     @classroom = classroom
   end
 
-  def play_hook
+  def play_hooky
     '¯\(ツ)/¯'
   end
 
-  def add_classroom(classroom)
+  def classroom=(classroom)
     @classroom = classroom
-    classroom.student.push(self) unless classroom.student.include?(self)
+    classroom.students.push(self) unless classroom.students.include?(self)
   end
 end
