@@ -1,6 +1,6 @@
-require './student'
-require './teacher'
-require './rental'
+require_relative 'classes/student'
+require_relative 'classes/teacher'
+require_relative 'classes/rental'
 
 class App
   attr_accessor :books, :people, :rentals

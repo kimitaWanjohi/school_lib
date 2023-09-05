@@ -1,4 +1,4 @@
-require './person'
+require_relative 'person'
 
 # This class is responsible for storing information about a teacher
 class Teacher < Person
