@@ -27,7 +27,7 @@ class CreateElements
     parent_permission = gets.chomp.downcase == 'y'
     print 'What is the classroom of the student?: '
     classroom = gets.chomp
-    new_student = Student.new(age, name, parent_permission, classroom)
+    new_student = Student.new(name, age, parent_permission, classroom)
     puts " #{name} as student has been created successfully!"
     @people.push(new_student)
   end
@@ -79,7 +79,7 @@ class CreateElements
     person_selected = gets.chomp.to_i - 1
     print 'What day was rented? [dd-mm-yyyy]'
     date = gets.chomp
-    new_rental = Rental.new(date, @people[person_selected], @books[book_selected])
+    new_rental = Rental.new(date, @books[book_selected], @people[person_selected])
     @rentals.push(new_rental)
     puts ' Rental created successfully!'
   end
