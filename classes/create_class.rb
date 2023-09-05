@@ -1,4 +1,4 @@
-require_relative 'list_elements_class'
+require_relative 'list_class'
 
 class CreateElements
   def initialize(books, people, rentals)
