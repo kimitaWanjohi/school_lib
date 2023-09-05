@@ -2,8 +2,8 @@ require_relative 'person'
 
 # This class is responsible for storing information about a teacher
 class Teacher < Person
-  def initialize(specialization, age, name: 'unknown', parent_permission: true)
-    super(age, name: name, parent_permission: parent_permission)
+  def initialize(age, name, specialization, parent_permission: true)
+    super(age, name, parent_permission)
     @specialization = specialization
   end
 
