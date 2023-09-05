@@ -76,6 +76,12 @@ Clone this repository to your desired folder:
 - Twitter: [@myro_dev](https://twitter.com/myro_dev)
 - LinkedIn: [kimitawanjohi](https://linkedin.com/in/kimitawanjohi)
 
+👤 **Kgomotso (Troos) Nacane**
+
+- GitHub: [Troos](https://github.com/Kgomotso196)
+- Twitter: [Troos](https://twitter.com/t_r_o_o_s)
+- LinkedIn: [Troos](https://linkedin.com/in/kgomotso-nacane)
+
 <!-- TODO ADD OTHER CONTRIBUTORS -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -83,6 +89,8 @@ Clone this repository to your desired folder:
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **[ Add an User Interface ]**
+- [ ] **Book Recommendation System using Enumerable Methods**
+- [ ] **Book Reservation System with Threads**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -92,7 +100,7 @@ Clone this repository to your desired folder:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/kimitaWanjohi/school_lib/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
