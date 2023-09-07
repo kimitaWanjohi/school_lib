@@ -1,10 +1,14 @@
 require_relative 'person'
-
-# This class is responsible for storing information about a teacher
 class Teacher < Person
-  def initialize(age, name, specialization, parent_permission: true)
-    super(age, name, parent_permission)
+  attr_reader :specialization
+
+  def initialize(age, name, specialization)
+    super(id, age, name)
     @specialization = specialization
+  end
+
+  def to_hash
+    super.merge(specialization: @specialization)
   end
 
   def can_use_services?
