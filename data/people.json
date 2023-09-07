@@ -1,10 +1,1 @@
-[
-  {
-    "id": 168,
-    "name": "12",
-    "age": "kimi",
-    "parent_permission": true,
-    "type": "Student",
-    "classroom": "1"
-  }
-]
+[{"id":168,"name":"12","age":"kimi","parent_permission":true,"type":"Student","classroom":"1"}]
