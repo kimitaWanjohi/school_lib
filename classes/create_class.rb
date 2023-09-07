@@ -1,11 +1,10 @@
-require_relative 'list_class'
-
 class CreateElements
   def initialize(books, people, rentals)
     @books = books
     @people = people
     @rentals = rentals
     @list_elements = ListElements.new(@books, @people, @rentals)
+    @unificate_data = ConvertData.new
   end
 
   def create_person
@@ -27,8 +26,8 @@ class CreateElements
     parent_permission = gets.chomp.downcase == 'y'
     print 'What is the classroom of the student?: '
     classroom = gets.chomp
-    new_student = Student.new(name, age, parent_permission, classroom)
-    puts " #{name} as student has been created successfully!"
+    new_student = Student.new(age, name, parent_permission, classroom)
+    puts "#{name} as student has been created successfully!"
     @people.push(new_student)
   end
 
@@ -38,7 +37,7 @@ class CreateElements
     print 'What does he/she teach? '
     specialization = gets.chomp
     new_teacher = Teacher.new(age, name, specialization)
-    puts " #{name} as teacher has been created successfully!"
+    puts "  #{name} as teacher has been created successfully!"
     @people.push(new_teacher)
   end
 
@@ -58,29 +57,33 @@ class CreateElements
     author = gets.chomp
     new_book = Book.new(title, author)
     @books.push(new_book)
-    puts " #{title} has been created succesfully!"
+    puts "  #{title} has been created succesfully!"
   end
 
   def create_rental
-    return puts 'Sorry, there are no books to be rented' if @books.empty?
-    return puts 'Sorry, there are no people to rent' if @people.empty?
+    all_books = @unificate_data.unificate_books(@books)
+    all_people = @unificate_data.unificate_person(@people)
 
-    puts 'Choose a book from the list:'
+    puts 'Please choose a book:'
+    all_books.each_with_index { |book, index| puts "[#{index + 1}]: Title: #{book.title}, Author: #{book.author}" }
+    print 'Please enter the index of the book you want to collect: '
+    book_chosen = gets.chomp.to_i
 
-    @list_elements.list_all_books
-    @books.each_with_index do |book, index|
-      puts "#{index + 1}) Title: \"#{book.title}\", Author: \"#{book.author}\""
+    puts 'Please choose a person:'
+    all_people.each_with_index do |person, index|
+      puts "[#{index + 1}]: ID: #{person.id} Name: #{person.name}, Profession: #{person.class}"
     end
-    book_selected = gets.chomp.to_i - 1
-    puts 'Select a person:'
-    @people.each_with_index do |person, index|
-      puts "#{index + 1}) [#{person.class}] Name: #{person.name}, ID: #{person.id}"
-    end
-    person_selected = gets.chomp.to_i - 1
-    print 'What day was rented? [dd-mm-yyyy]'
+    print 'Please enter the index of the person: '
+    person_chosen = gets.chomp.to_i
+
+    book_to_collect = all_books[book_chosen - 1]
+    person_to_collect = all_people[person_chosen - 1]
+
+    print 'What day was rented? [dd-mm-yyyy]: '
     date = gets.chomp
-    new_rental = Rental.new(date, @books[book_selected], @people[person_selected])
+
+    new_rental = Rental.new(date, person_to_collect, book_to_collect, person_to_collect.id)
     @rentals.push(new_rental)
-    puts ' Rental created successfully!'
+    puts '  Rental created successfully!'
   end
 end
