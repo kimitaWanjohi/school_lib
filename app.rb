@@ -1,3 +1,4 @@
+require 'json'
 require_relative 'classes/student'
 require_relative 'classes/teacher'
 require_relative 'classes/rental'
@@ -12,11 +13,6 @@ class App
   attr_accessor :books, :people, :rentals
 
   def initialize
-    @people = []
-    @books = []
-    @rentals = []
-    @list_elements = ListElements.new(@books, @people, @rentals)
-    @creale_elements = CreateElements.new(@books, @people, @rentals)
     @data_storage = DataStorage.new
     @convert_data = ConvertData.new
   end
